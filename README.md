@@ -46,6 +46,13 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
 ----
 ----
 
+## Destaques
+
+Foram usados triggers para manter a consistência da tabela, e Views para ajudar na visualização de dados úteis sem que seja necessário executar manualmente uma consulta a cada vez.
+
+----
+----
+
 ## Análise das regras de normalização nas tabelas
 Como ficaria inviável analisar todas as regras de normalização para cada uma das tabelas separadamente, as três tabelas principais (Client, Rental, Car) serão analisadas, sendo que, para cada uma, serão analisadas as regras de uma das três primeiras formas normais.
 
