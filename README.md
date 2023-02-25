@@ -222,6 +222,8 @@ Abaixo são apresentadas uma a uma as regras de negócio que devem ser seguidas 
   ![view travelled distance by client and car (2)](https://user-images.githubusercontent.com/17331645/221337110-1c221b7b-96ec-4cad-b8e5-3aa9d5db9d78.png)
 
   Foram criadas duas Views para satisfazer as condições da regra de negócio: uma View que mostra a distância em quilômetros que cada cliente percorreu com cada carro, e outra View que mostra quanto cada um dos carros já percorreu em locações. Caso algum carro/cliente não apareça nas Views é porque ainda não há registro de locação para o cliente/carro em questão.
+  
+  Observação: é importante notar que a quilometragem de um carro no início de uma locação não é necessariamente igual à sua quilometragem ao término da sua locação anterior, haja vista que, entre locações sucessivas, o carro pode rodar por qualquer motivo que não seja uma locação; por exemplo, ele poderia ir à oficina.
 
   </details>
 
