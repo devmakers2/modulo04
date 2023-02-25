@@ -131,5 +131,10 @@ regras de negócio:
 
   <details>
   
+  ![rental (1)](https://user-images.githubusercontent.com/17331645/221345384-0a5490ab-501f-4dcf-820e-3fe174b0a2a4.png)
+
+  ![rental (2)](https://user-images.githubusercontent.com/17331645/221345385-163baba6-6df1-4226-b270-1af95a7b9eaf.png)
+
+  A tabela Rental guarda informações de em que unidade da Carloca o aluguel foi iniciado, e em que unidade da Carloca o carro foi efetivamente devolvido. Portanto, a regra de negócio é atendida.
   
   </details>
