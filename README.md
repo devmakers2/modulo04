@@ -4,7 +4,94 @@
 ## 4º módulo do curso #dev_makers da Ada em parceria com a Sinqia
 ### Projeto Carloca - modelagem do banco da dados do sistema de uma locadora de carros
 
-regras de negócio:
+> **Note**
+> 
+> Clicando em "Saiba mais" mais detalhes são apresentados.
+
+## Modelagem e explicação
+Há três tabelas principais: uma com os registros dos clientes, uma com os registros de cada locação, e uma com os registros dos veículos.
+
+- tabelas com informações dos clientes
+
+  <details>
+
+  ![client](https://user-images.githubusercontent.com/17331645/221346112-45ff80f7-c234-421c-9ecc-8c12c977ad38.png)
+
+  Nesta modelagem cada cliente tem exatamente um nome, um endereço, e um telefone. Diferentes clientes (por exemplo um pai e seu filho) podem ter os mesmos endereço e telefone; além disso, clientes diferentes podem ter coincidentemente o mesmo nome.
+  
+  </details>
+  
+- tabelas com informações das locações
+
+  <details>
+
+  ![rental](https://user-images.githubusercontent.com/17331645/221346477-e5f87ca6-23fa-428e-9622-e5a6d31c49f1.png)
+
+  A tabela Rental guarda os registros das locações. Os campos id_location_of_return, return_date, e car_km_at_return permanecem NULL até o término da locação, que termina quando o carro é efetivamente devolvido.
+
+  A tabela Carloca_Location guarda as informações das unidades da franquia da Carloca, e, de forma semelhante à tabela Client, se liga às tabelas Address e Telephone.
+  
+  </details>
+  
+- tabelas com informações dos carros
+
+  <details>
+  
+  ![car](https://user-images.githubusercontent.com/17331645/221346741-6b81054b-bbe8-4010-9bb2-97564041a008.png)
+
+  A tabela Car presumivelmente guarda as informações dos carros. Cada carro tem um modelo, modelo este que por sua vez, é exclusivo de uma montadora (portanto a informação do modelo carrega para Car a informação da montadora, por exemplo, não existe carro modelo Gol da Fiat, Gol é da volkswagen).
+  
+  </details>
+  
+## Análise das regras de normalização nas tabelas
+Como ficaria inviável analisar todas as regras de normalização para cada uma das tabelas separadamente, as três tabelas principais (Client, Rental, Car) serão analisadas, sendo que, para cada uma, serão analisadas as regras de uma das três primeiras formas normais.
+
+- análise das regras da primeira forma normal na tabela Client
+
+  <details>
+  
+  ![client (2)](https://user-images.githubusercontent.com/17331645/221347841-41f74a71-d03f-430e-a8f6-2bc353871b27.png)
+
+  Segundo o Material do Aluno, disponibilizado no Class pela Ada:
+  "[...] dizemos que uma tabela está na 1FN quando não há grupo de dados repetidos, e também não há campos que guardam valores compostos".
+  
+  Podemos ver que não há grupo de dados repetidos, e que os campos que guardariam valores compostos (como endereço e telefone) foram substituídos por chaves extrangeiras de outras tabelas. Sendo assim, a tabela segue as regras da primeira forma normal.
+
+  </details>
+  
+- análise das regras da segunda forma normal na tabela Rental
+
+  <details>
+  
+  ![rental (1)](https://user-images.githubusercontent.com/17331645/221347967-f3aa7e75-8505-49ce-8445-cfedb52b020e.png)
+
+  Pressupõe-se que a tabela já esteja na primeira forma normal.
+  
+  Segundo o Material do Aluno, disponibilizado no Class pela Ada:
+  "Dizemos que uma tabela está na segunda forma normal(2FN) se ela estiver na 1FN e todos os atributos que são não chave (PK/FK) forem totalmente dependentes da chave primária da tabela".
+  
+  Todos os atributos que não são chave (aqueles atributos que, nesta tabela, não começam com id) são características intrínsecas da locação específica, isto é, são  completamente dependentes da chave primária. Portanto a tabela segue as regras da segunda forma normal.
+
+  </details>
+  
+- análise das regras da terceira forma normal na tabela Car
+
+  <details>
+  
+  ![car (1)](https://user-images.githubusercontent.com/17331645/221348178-5cf78cd3-fd5d-4d9a-aa1c-cd23f2ede4a4.png)
+  
+  Pressupõe-se que a tabela já esteja na segunda forma normal.
+
+  Segundo o Material do Aluno, disponibilizado no Class pela Ada:
+  "Dizemos que uma tabela está na terceira forma normal (3FN) se ela estiver na 2FN e não tivermos uma coluna não chave dependente de outra coluna não chave".
+  
+  Todos os atributos que não são chave (manufacture_year, price_per_day, etc) são independentes entre si, portanto as regras da terceira forma normal são seguidas.
+
+  </details>
+
+## Regras de negócio
+Abaixo são apresentadas uma a uma as regras de negócio que devem ser seguidas pelo projeto, e uma explicação de como a regra em questão é seguida no projeto.
+
 - Um carro possui modelo, montadora, cor, e versão.
 
   <details>
