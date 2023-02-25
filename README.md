@@ -187,7 +187,7 @@ Abaixo são apresentadas uma a uma as regras de negócio que devem ser seguidas 
 
   ![available_cars (2)](https://user-images.githubusercontent.com/17331645/221333358-f5ac3aa5-9094-4e4e-9cc1-2a54fcdf33c9.png)
   
-  Foi criada uma View que mostrade maneira atualizada os carros que não estão locados em determinado momento. Ofertando-se apenas os carros que estão presentes nesta View garante-se o cumprimento da regra de negócio.
+  Foi criada uma View que mostra de maneira atualizada os carros que não estão locados em determinado momento. Ofertando-se apenas os carros que estão presentes nesta View garante-se o cumprimento da regra de negócio.
   
   </details>
 
