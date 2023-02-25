@@ -83,6 +83,11 @@ regras de negócio:
 
   <details>
   
+  ![available_cars (1)](https://user-images.githubusercontent.com/17331645/221333356-38614d75-9645-4019-b161-1f7b62643d4a.png)
+
+  ![available_cars (2)](https://user-images.githubusercontent.com/17331645/221333358-f5ac3aa5-9094-4e4e-9cc1-2a54fcdf33c9.png)
+  
+  Foi criada uma View que mostrade maneira atualizada os carros que não estão locados em determinado momento. Ofertando-se apenas os carros que estão presentes nesta View garante-se o cumprimento da regra de negócio.
   
   </details>
 
@@ -92,16 +97,32 @@ regras de negócio:
  
   <details>
   
+  ![view clientes que alugaram determinado carro (1)](https://user-images.githubusercontent.com/17331645/221334259-9c44bffe-b006-44f8-9ac0-8c33db44c109.png)
+
+  ![view clientes que alugaram determinado carro (2)](https://user-images.githubusercontent.com/17331645/221334263-18fa487e-d5eb-42a9-87e4-dcfec2e15ddf.png)
+  
+  Foi criada uma View que mostra quais clientes já alugaram determinado carro, satisfazendo assim a regra de negócio.
+  
+  É interessante observar que esta mesma View possui ainda outra funcionalidade, semelhante: caso a View seja ordenada pelos ids dos clientes, será possível ter uma visualização fácil de quais carros determinado cliente já alugou (em vez de quais clientes já alugaram determinado carro).
   
   </details>
 
 ----
 
-- O sistema deve manter o histórico da distância que o cliente percorreu com o carro, bem como a distância total percorrida com cada um dos carros.
+- O sistema deve manter o histórico da distância que o cliente percorreu com o carro, bem como a distância total percorrida por clientes com cada um dos carros.
 
   <details>
   
-  
+  ![view total travelled by clients distance for each car (2)](https://user-images.githubusercontent.com/17331645/221337080-93894dd8-be45-460d-8fb4-5cb48baa49a7.png)
+
+  ![view total travelled by clients distance for each car (1)](https://user-images.githubusercontent.com/17331645/221337097-291c34dd-ea18-4b4d-98cc-52fd0c4154f2.png)
+
+  ![view travelled distance by client and car (1)](https://user-images.githubusercontent.com/17331645/221337102-9cfe6fa8-3054-4c3b-a236-e3109567beff.png)
+
+  ![view travelled distance by client and car (2)](https://user-images.githubusercontent.com/17331645/221337110-1c221b7b-96ec-4cad-b8e5-3aa9d5db9d78.png)
+
+  Foram criadas duas Views para satisfazer as condições da regra de negócio: uma View que mostra a distância em quilômetros que cada cliente percorreu com cada carro, e outra View que mostra quanto cada um dos carros já percorreu em locações. Caso algum carro/cliente não apareça nas Views é porque ainda não há registro de locação para o cliente/carro em questão.
+
   </details>
 
 ----
