@@ -17,9 +17,20 @@ regras de negócio:
 
 podemos ver através das imagens acima que, além de outros atributos, um carro tem modelo, cor, e versão. Como cada modelo tem uma montadora específica, a regra de negócio é respeitada.
 
-
 - As cores de carro disponíveis são apenas branco, preto, e prata.
+
+![color (1)](https://user-images.githubusercontent.com/17331645/221324245-0aba5712-fe75-43c6-9757-406e02dff086.png)
+
+![color](https://user-images.githubusercontent.com/17331645/221324249-de8cd3b7-3217-4ba3-bd02-a5b53c604bf2.png)
+
+Cada carro tem exatamente uma cor, sendo que as cores estão listadas na tabela Color (para adicionar uma nova cor basta adicionar uma nova linha à tabela Color). Sendo assim, a regra de negócio é obedecida.
+
 - Existem várias categorias de carro (hatch, sedan compacto, sedan médio, SUV, etc...).
+
+![category (2)](https://user-images.githubusercontent.com/17331645/221324436-2466c714-9371-40b0-bf98-1df46c8f3e04.png)
+
+![category (1)](https://user-images.githubusercontent.com/17331645/221324440-9d87a33f-e3f1-47c4-8d58-dd944b26beb1.png)
+
 - Um cliente pode alugar um carro somente na modalidade "diária".
 - Um cliente não pode alugar mais de um carro ao mesmo tempo. 
 - Enquanto um carro estiver locado por um cliente, tal carro não pode ser ofertado.
