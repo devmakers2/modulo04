@@ -159,7 +159,7 @@ Abaixo são apresentadas uma a uma as regras de negócio que devem ser seguidas 
 
   ![rental (2)](https://user-images.githubusercontent.com/17331645/221328218-aa0a8284-c181-42fa-afce-bd80b4a028f2.png)
 
-  Cada registro de locação de carro (registrados na tabela Rental) possui as datas de início da locação, e de fim da locação (quando o carro é entregado). Assim é possível saber quantos dias o cliente locatário ficou com o carro, para que o cliente seja cobrado de acordo com o número de dias que ficou com o carro. Sendo assim, esta regra de negócio é respeitada.
+  Cada registro de locação de carro (registrados na tabela Rental) possui as datas de início da locação, e de fim da locação (quando o carro é devolvido). Assim é possível saber quantos dias o cliente locatário ficou com o carro, para que o cliente seja cobrado de acordo com o número de dias que ficou com o carro. Sendo assim, esta regra de negócio é respeitada.
 
   </details>
   
