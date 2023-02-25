@@ -39,7 +39,7 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
   
   ![car](https://user-images.githubusercontent.com/17331645/221346741-6b81054b-bbe8-4010-9bb2-97564041a008.png)
 
-  A tabela Car presumivelmente guarda as informações dos carros. Cada carro tem um modelo, modelo este que por sua vez, é exclusivo de uma montadora (portanto a informação do modelo carrega para Car a informação da montadora, por exemplo, não existe carro modelo Gol da Fiat, Gol é da volkswagen).
+  A tabela Car previsivelmente guarda as informações dos carros. Cada carro tem um modelo, modelo este que, por sua vez, é exclusivo de uma montadora (portanto a informação do modelo carrega para Car a informação da montadora; por exemplo, não existe carro modelo Gol da Fiat, Gol é da volkswagen).
   
   </details>
 
