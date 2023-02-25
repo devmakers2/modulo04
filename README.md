@@ -42,7 +42,10 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
   A tabela Car presumivelmente guarda as informações dos carros. Cada carro tem um modelo, modelo este que por sua vez, é exclusivo de uma montadora (portanto a informação do modelo carrega para Car a informação da montadora, por exemplo, não existe carro modelo Gol da Fiat, Gol é da volkswagen).
   
   </details>
-  
+
+----
+----
+
 ## Análise das regras de normalização nas tabelas
 Como ficaria inviável analisar todas as regras de normalização para cada uma das tabelas separadamente, as três tabelas principais (Client, Rental, Car) serão analisadas, sendo que, para cada uma, serão analisadas as regras de uma das três primeiras formas normais.
 
@@ -88,6 +91,9 @@ Como ficaria inviável analisar todas as regras de normalização para cada uma 
   Todos os atributos que não são chave (manufacture_year, price_per_day, etc) são independentes entre si, portanto as regras da terceira forma normal são seguidas.
 
   </details>
+
+----
+----
 
 ## Regras de negócio
 Abaixo são apresentadas uma a uma as regras de negócio que devem ser seguidas pelo projeto, e uma explicação de como a regra em questão é seguida no projeto.
