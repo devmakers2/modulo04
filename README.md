@@ -69,8 +69,12 @@ Foram usados triggers para manter a consistência da tabela, e Views para ajudar
 - uso de Views
 
   <details>
+  
+  ![available_cars (1)](https://user-images.githubusercontent.com/17331645/221385506-0a03cd81-bb54-4af2-aafa-d502bc69b6fe.png)
+  
+  ![available_cars (2)](https://user-images.githubusercontent.com/17331645/221385508-47c8f791-6e15-427c-bd0d-73559b5e65ee.png)
 
-
+  Views foram utilizadas para uma melhor vizualização de dados interessantes, sem que seja necesário a escrita manual da consulta a cada vez que se queira ver tais dados. Por exemplo a View nas imagens acima mostra de maneira simples os carros que não estão locados no momento (esta e as outras Views utilizadas são mais bem explicadas na seção "Regras de negócio", mais abaixo já que para cada regra há uma explicação de como ela está sendo seguida).
 
   </details>
 
