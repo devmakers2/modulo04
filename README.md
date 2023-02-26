@@ -1,8 +1,7 @@
-# == EM DESENVOLVIMENTO ATÉ 28/02/2023 ==
-
 # Banco de Dados (MySQL)
-## 4º módulo do curso #dev_makers da Ada em parceria com a Sinqia
-### Projeto Carloca - modelagem do banco da dados do sistema de uma locadora de carros
+### 4º módulo do curso #dev_makers da Ada em parceria com a Sinqia
+
+## Projeto Carloca - modelagem do banco da dados do sistema de uma locadora de carros
 
 > **Note**
 > 
@@ -48,7 +47,7 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
 
 ## Destaques
 
-Foram usados triggers para manter a consistência da tabela, e Views para ajudar na visualização de dados úteis sem que seja necessário executar manualmente uma consulta a cada vez.
+Foram usados triggers para ajudar a manter a consistência dos dados, e Views para ajudar na visualização de dados úteis sem que seja necessário executar manualmente uma consulta a cada vez, além da funcionalidade de coluna virtual (Generated Column) para a população automática de valores em uma coluna baseada em valores de outras colunas.
 
 - uso de triggers
 
