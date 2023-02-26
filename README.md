@@ -50,6 +50,42 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
 
 Foram usados triggers para manter a consistência da tabela, e Views para ajudar na visualização de dados úteis sem que seja necessário executar manualmente uma consulta a cada vez.
 
+- uso de triggers
+
+  <details>
+
+  ![triggers consistência rental](https://user-images.githubusercontent.com/17331645/221385075-073670a5-4978-4ee0-ba63-329e55e85081.png)
+
+  Triggers foram usados para auxiliar na manutenão do banco de dados. No exemplo acima, o código entre as linhas 5 e 8 garante que a data de devolução de um carro (ou seja, a data de término de uma locação) seja sempre posterior à data de início da locação.
+  
+  Já o código entre as linhas 10 e 13 garante que a quilometragem registrada ao término de uma locação não seja menor que a quilometragem no início da locação.
+  
+  O código entre as linhas 15 e 17 é explicado na seção "Regras de negócio", mais abaixo.
+  
+  Assim, pode-se ver que o uso de triggers pode ajudar na prevenção de inserção de dados errados nas tabelas, auxiliando na manutenção da consistência dos dados.
+
+  </details>
+
+- uso de Views
+
+  <details>
+
+
+
+  </details>
+
+- uso de coluna virtual (Generated Column) 
+
+  <details>
+
+  ![name com coluna virtual (2)](https://user-images.githubusercontent.com/17331645/221384847-01bde90d-f8c3-4f62-8123-98cc9f879471.png)
+
+  ![name com coluna virtual (1)](https://user-images.githubusercontent.com/17331645/221384852-10d0c4e5-578c-4d80-8ccb-81807cd77252.png)
+  
+  A funcionalidade de coluna virtual foi utilizada aqui para gerar automaticamente os valores da coluna full_name. Caso algum valor nas outras colunas mude, por exemplo o nome mude de Isabel para Izabel, o nome completo na coluna full_name será atualizado automaticamente.
+
+  </details>
+
 ----
 ----
 
