@@ -275,4 +275,6 @@ Abaixo são apresentadas uma a uma as regras de negócio que devem ser seguidas 
 
   A tabela Rental guarda informações de em que unidade da Carloca o aluguel foi iniciado, e em que unidade da Carloca o carro foi efetivamente devolvido. Portanto, a regra de negócio é atendida.
   
+  Observação: importante notar que não necessariamente um carro será locado na unidade em que foi devolvido ao final da locação anterior, haja vista que, entre duas locações sucessivas, o carro pode por ser movido para outra unidade da Carloca.
+  
   </details>
