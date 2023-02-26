@@ -7,7 +7,13 @@
 > 
 > Clicando em "Saiba mais" mais detalhes são apresentados.
 
+> **Note**
+> 
+> O projeto passou por diferentes revisões, por isso algumas imagens podem não corresponder ao estado atual do banco de dados, mas sem que isso interfira no que se está querendo ilustrar com as imagens. O estado atual do banco de dados é o que pode ser visto no arquivo .sql com o script de criação, e no arquivo .mwb com o diagrama de entidades e relações.
+
 ## Modelagem e explicação
+A estrutura do banco de dados está feita em inglês (para uma possível manutenção por um time internacional), porém os dados em si estão em português (pois a utilização seria feita por brasileiros).
+
 Há três tabelas principais: uma com os registros dos clientes, uma com os registros de cada locação, e uma com os registros dos veículos.
 
 - tabelas com informações dos clientes
