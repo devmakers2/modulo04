@@ -252,7 +252,7 @@ Abaixo são apresentadas uma a uma as regras de negócio que devem ser seguidas 
   
   Foi criada uma View que mostra quais clientes já alugaram determinado carro, satisfazendo assim a regra de negócio.
   
-  É interessante observar que esta mesma View possui ainda outra funcionalidade, semelhante: caso a View seja ordenada pelos ids dos clientes, será possível ter uma visualização fácil de quais carros determinado cliente já alugou (em vez de quais clientes já alugaram determinado carro).
+  É interessante observar que esta mesma View poderia ainda ser utilizada de uma outra maneira: caso a View seja ordenada pelos ids dos clientes, será possível ter uma visualização fácil de quais carros determinado cliente já alugou (em vez de quais clientes já alugaram determinado carro).
   
   </details>
 
