@@ -14,9 +14,11 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
 
   <details>
 
-  ![client](https://user-images.githubusercontent.com/17331645/221346112-45ff80f7-c234-421c-9ecc-8c12c977ad38.png)
+  ![tabelas de cliente](https://user-images.githubusercontent.com/17331645/221386854-aca71062-9279-47e4-af3a-f8d03d037bf6.png)
 
   Nesta modelagem cada cliente tem exatamente um nome, um endereço, e um telefone. Diferentes clientes (por exemplo um pai e seu filho) podem ter os mesmos endereço e telefone; além disso, clientes diferentes podem ter coincidentemente o mesmo nome.
+  
+  Para o campo do tipo do telefone (coluna type na tabela Telephone) foi utilizado o tipo ENUM, que permite que se restrinjam as opções possíveis para aquele campo (no caso, o tipo de telefone pode ser ou "fixo" ou "celular").
   
   </details>
   
@@ -39,6 +41,8 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
   ![car](https://user-images.githubusercontent.com/17331645/221346741-6b81054b-bbe8-4010-9bb2-97564041a008.png)
 
   A tabela Car previsivelmente guarda as informações dos carros. Cada carro tem um modelo, modelo este que, por sua vez, é exclusivo de uma montadora (portanto a informação do modelo carrega para Car a informação da montadora; por exemplo, não existe carro modelo Gol da Fiat, Gol é da Volkswagen).
+  
+  Para o tipo dos valores da coluna price_per_day, foi utilizado DECIMAL em vez de DOUBLE, pois DOUBLE gera valores aproximados, enquanto DECIMAL é exato, e exatidão é desejável por se tratar de valores financeiros.
   
   </details>
 
