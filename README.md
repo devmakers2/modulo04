@@ -127,7 +127,7 @@ Como ficaria inviável analisar todas as regras de normalização para cada uma 
   Pressupõe-se que a tabela já esteja na primeira forma normal.
   
   Segundo o Material do Aluno, disponibilizado no Class pela Ada:
-  "Dizemos que uma tabela está na segunda forma normal(2FN) se ela estiver na 1FN e todos os atributos que são não chave (PK/FK) forem totalmente dependentes da chave primária da tabela".
+  "Dizemos que uma tabela está na segunda forma normal (2FN) se ela estiver na 1FN e todos os atributos que são não chave (PK/FK) forem totalmente dependentes da chave primária da tabela".
   
   Todos os atributos que não são chave (aqueles atributos que, nesta tabela, não começam com id) são características intrínsecas da locação específica, isto é, são  completamente dependentes da chave primária. Portanto a tabela segue as regras da segunda forma normal.
 
