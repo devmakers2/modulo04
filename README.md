@@ -56,7 +56,7 @@ Foram usados triggers para manter a consistência da tabela, e Views para ajudar
 
   ![triggers consistência rental](https://user-images.githubusercontent.com/17331645/221385075-073670a5-4978-4ee0-ba63-329e55e85081.png)
 
-  Triggers foram usados para auxiliar na manutenão do banco de dados. No exemplo acima, o código entre as linhas 5 e 8 garante que a data de devolução de um carro (ou seja, a data de término de uma locação) seja sempre posterior à data de início da locação.
+  Triggers foram usados para auxiliar na manutenão do banco de dados. No exemplo acima, o código entre as linhas 5 e 8 garante que a data de devolução de um carro (ou seja, a data de término de uma locação) na tabela Rental seja sempre posterior à data de início da locação.
   
   Já o código entre as linhas 10 e 13 garante que a quilometragem registrada ao término de uma locação não seja menor que a quilometragem no início da locação.
   
