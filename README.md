@@ -11,7 +11,7 @@
 
 > **Note**
 > 
-> O projeto passou por diferentes revisões, por isso algumas imagens podem ter pequenas diferenças quando comparadas ao estado atual do banco de dados, mas sem que isso interfira no que se está querendo ilustrar com as imagens. O estado atual do banco de dados é o que pode ser visto no arquivo .sql com o script de criação, e no arquivo .mwb com o diagrama de entidades e relações.
+> Algumas imagens podem ter pequenas diferenças quando comparadas ao estado atual do banco de dados, mas sem que isso interfira no que se está querendo ilustrar com as imagens. Isso acontece porque o projeto está em processo de melhoria contínua. O estado atual do banco de dados é o que pode ser visto no arquivo .sql com o script de criação, e no arquivo .mwb com o diagrama de entidades e relações.
 
 ## Modelagem e explicação
 A estrutura do banco de dados está feita em inglês (para uma possível manutenção por um time internacional), porém os dados em si estão em português (pois a utilização seria feita por brasileiros).
@@ -22,10 +22,12 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
 
   <details>
 
-  ![tabelas de cliente](https://user-images.githubusercontent.com/17331645/221386854-aca71062-9279-47e4-af3a-f8d03d037bf6.png)
+  ![tabelas clientes](https://user-images.githubusercontent.com/17331645/221466954-bfa67216-c6d7-49eb-be20-36a80491f8ef.png)
 
-  Nesta modelagem cada cliente tem exatamente um nome, um endereço, e um telefone. Diferentes clientes (por exemplo um pai e seu filho) podem ter os mesmos endereço e telefone; além disso, clientes diferentes podem ter coincidentemente o mesmo nome.
-  
+  Nesta modelagem cada cliente tem exatamente um nome, e um endereço. Diferentes clientes (por exemplo um pai e seu filho) podem ter o mesmo endereço; além disso, clientes diferentes podem ter coincidentemente o mesmo nome.
+
+  Além disso cada cliente pode ter muitos telefones, da mesma forma que um mesmo número de telefone pode pertencer a mais de um cliente (por exemplo, moradores de uma mesma casa que dividem um telefone fixo). Por isso há uma relação de muitos para muitos entre as tabelas Client e Telephone. Tal relação de muitos para muitos é criada com o auxílio da tabela intermediária Client-Telephone, que guarda chaves estrangeiras das tabelas Client e Telephone.
+    
   Para o campo do tipo do telefone (coluna type na tabela Telephone) foi utilizado o tipo ENUM, que permite que se restrinjam as opções possíveis para aquele campo (no caso, o tipo de telefone pode ser ou "fixo" ou "celular").
   
   </details>
