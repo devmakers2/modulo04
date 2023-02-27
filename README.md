@@ -112,13 +112,13 @@ Como ficaria inviável analisar todas as regras de normalização para cada uma 
 - análise das regras da primeira forma normal na tabela Client
 
   <details>
-  
-  ![client (2)](https://user-images.githubusercontent.com/17331645/221347841-41f74a71-d03f-430e-a8f6-2bc353871b27.png)
+
+  ![cliente](https://user-images.githubusercontent.com/17331645/221467707-5dfebb86-3c90-47a5-98db-1b7b77ec59da.png)
 
   Segundo o Material do Aluno, disponibilizado no Class pela Ada:
   "[...] dizemos que uma tabela está na 1FN quando não há grupo de dados repetidos, e também não há campos que guardam valores compostos".
   
-  Podemos ver que não há grupo de dados repetidos, e que os campos que guardariam valores compostos (como endereço e telefone) foram substituídos por chaves extrangeiras de outras tabelas. Sendo assim, a tabela segue as regras da primeira forma normal.
+  Podemos ver que não há grupo de dados repetidos, e que os campos que guardariam valores compostos (como endereço) foram substituídos por chaves estrangeiras de outras tabelas. Sendo assim, a tabela segue as regras da primeira forma normal.
 
   </details>
   
