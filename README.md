@@ -1,5 +1,3 @@
-# == EM DESENVOLVIMENTO ATÉ 28/02/2023 ==
-
 # Banco de Dados (MySQL)
 ### 4º módulo do curso #dev_makers da Ada em parceria com a Sinqia
 
@@ -11,7 +9,7 @@
 
 > **Note**
 > 
-> Algumas imagens podem ter pequenas diferenças quando comparadas ao estado atual do banco de dados, mas sem que isso interfira no que se está querendo ilustrar com as imagens. Isso acontece porque o projeto está em processo de melhoria contínua. O estado atual do banco de dados é o que pode ser visto no arquivo .sql com o script de criação, e no arquivo .mwb com o diagrama de entidades e relações.
+> Algumas imagens podem ter pequenas diferenças quando comparadas ao estado atual do banco de dados, mas sem que isso interfira no que se está querendo ilustrar com as imagens. Isso acontece porque o projeto está em processo de melhoria contínua. O estado atual do banco de dados é o que pode ser visto no arquivo CARLOCA.sql com o script de criação, e no arquivo diagrama.mwb com o diagrama de entidades e relações (talvez o arquivo diagrama.mwb só abra no MySQL Workbench).
 
 ## Modelagem e explicação
 A estrutura do banco de dados está feita em inglês (para uma possível manutenção por um time internacional), porém os dados em si estão em português (pois a utilização seria feita por brasileiros).
@@ -26,7 +24,7 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
 
   Nesta modelagem cada cliente tem exatamente um nome, e um endereço. Diferentes clientes (por exemplo um pai e seu filho) podem ter o mesmo endereço; além disso, clientes diferentes podem ter coincidentemente o mesmo nome.
 
-  Além disso cada cliente pode ter muitos telefones, da mesma forma que um mesmo número de telefone pode pertencer a mais de um cliente (por exemplo, moradores de uma mesma casa que dividem um telefone fixo). Por isso há uma relação de muitos para muitos entre as tabelas Client e Telephone. Tal relação de muitos para muitos é criada com o auxílio da tabela intermediária Client-Telephone, que guarda chaves estrangeiras das tabelas Client e Telephone.
+  Cada cliente pode ainda ter muitos telefones, da mesma forma que um mesmo número de telefone pode pertencer a mais de um cliente (por exemplo, moradores de uma mesma casa que dividem um telefone fixo). Por isso há uma relação de muitos para muitos entre as tabelas Client e Telephone. Tal relação de muitos para muitos é criada com o auxílio da tabela intermediária Client-Telephone, que guarda chaves estrangeiras das tabelas Client e Telephone.
     
   Para o campo do tipo do telefone (coluna type na tabela Telephone) foi utilizado o tipo ENUM, que permite que se restrinjam as opções possíveis para aquele campo (no caso, o tipo de telefone pode ser ou "fixo" ou "celular").
   
@@ -50,7 +48,7 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
   
   ![car](https://user-images.githubusercontent.com/17331645/221346741-6b81054b-bbe8-4010-9bb2-97564041a008.png)
 
-  A tabela Car previsivelmente guarda as informações dos carros. Cada carro tem um modelo, modelo este que, por sua vez, é exclusivo de uma montadora (portanto a informação do modelo carrega para Car a informação da montadora; por exemplo, não existe carro modelo Gol da Fiat, Gol é da Volkswagen).
+  A tabela Car previsivelmente guarda as informações dos carros. Cada carro tem um modelo, modelo este que, por sua vez, é exclusivo de uma montadora (portanto a informação do modelo carrega para Car a informação da montadora; por exemplo, não existe carro modelo Gol da Fiat, Gol é obrigatoriamente da Volkswagen).
   
   Para o tipo dos valores da coluna price_per_day, foi utilizado DECIMAL em vez de DOUBLE, pois DOUBLE gera valores aproximados, enquanto DECIMAL é exato, e exatidão é desejável por se tratar de valores financeiros.
   
@@ -61,7 +59,7 @@ Há três tabelas principais: uma com os registros dos clientes, uma com os regi
 
 ## Destaques
 
-Foram usados triggers para ajudar a manter a consistência dos dados, e Views para ajudar na visualização de dados úteis sem que seja necessário executar manualmente uma consulta a cada vez, além da funcionalidade de coluna virtual (Generated Column) para a população automática de valores em uma coluna baseada em valores de outras colunas.
+Foram usados triggers para ajudar a manter a consistência dos dados, e Views para ajudar na visualização de dados úteis sem que seja necessário executar manualmente uma consulta a cada vez, além da funcionalidade de coluna virtual (Generated Column) para a população automática de valores em uma coluna baseada nos valores de outras colunas.
 
 - uso de triggers
 
@@ -87,7 +85,7 @@ Foram usados triggers para ajudar a manter a consistência dos dados, e Views pa
   
   ![available_cars (2)](https://user-images.githubusercontent.com/17331645/221385508-47c8f791-6e15-427c-bd0d-73559b5e65ee.png)
 
-  Views foram utilizadas para uma melhor vizualização de dados interessantes, sem que seja necesário a escrita manual da consulta a cada vez que se queira ver tais dados. Por exemplo a View nas imagens acima mostra de maneira simples os carros que não estão locados no momento (esta e as outras Views utilizadas são mais bem explicadas na seção "Regras de negócio", mais abaixo já que para cada regra há uma explicação de como ela está sendo seguida).
+  Views foram utilizadas para uma melhor vizualização de dados interessantes, sem que seja necesária a escrita manual da consulta a cada vez que se queira ver tais dados. Por exemplo a View nas imagens acima mostra de maneira simples os carros que não estão locados no momento (esta e as outras Views utilizadas são mais bem explicadas na seção "Regras de negócio", mais abaixo; para cada regra há uma explicação de como ela está sendo seguida).
 
   </details>
 
@@ -212,7 +210,7 @@ Abaixo são apresentadas uma a uma as regras de negócio que devem ser seguidas 
 
   ![rental (2)](https://user-images.githubusercontent.com/17331645/221328218-aa0a8284-c181-42fa-afce-bd80b4a028f2.png)
 
-  Cada registro de locação de carro (registrados na tabela Rental) possui as datas de início da locação, e de fim da locação (quando o carro é devolvido). Assim é possível saber quantos dias o cliente locatário ficou com o carro, para que o cliente seja cobrado de acordo com o número de dias que ficou com o carro. Sendo assim, esta regra de negócio é respeitada.
+  Cada registro de locação de carro (registrados na tabela Rental) possui as datas de início da locação, e de fim da locação (quando o carro é devolvido). Assim é possível saber quantos dias o cliente locatário ficou com o carro, para que o cliente seja cobrado de acordo com o número de dias que ficou com o carro. Portanto esta regra de negócio é respeitada.
 
   </details>
   
@@ -292,6 +290,6 @@ Abaixo são apresentadas uma a uma as regras de negócio que devem ser seguidas 
 
   A tabela Rental guarda informações de em que unidade da Carloca o aluguel foi iniciado, e em que unidade da Carloca o carro foi efetivamente devolvido. Portanto, a regra de negócio é atendida.
   
-  Observação: importante notar que não necessariamente um carro será locado na unidade em que foi devolvido ao final da locação anterior, haja vista que, entre duas locações sucessivas, o carro pode por ser movido para outra unidade da Carloca.
+  Observação: importante notar que não necessariamente um carro será locado na unidade em que foi devolvido ao final de sua locação anterior, haja vista que, entre duas locações sucessivas, o carro pode ser movido para outra unidade da Carloca.
   
   </details>
