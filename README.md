@@ -9,7 +9,7 @@
 
 > **Note**
 > 
-> Algumas imagens podem ter pequenas diferenças quando comparadas ao estado atual do banco de dados, mas sem que isso interfira no que se está querendo ilustrar com as imagens. Isso acontece porque o projeto está em processo de melhoria contínua. O estado atual do banco de dados é o que pode ser visto no arquivo CARLOCA.sql com o script de criação, e no arquivo diagrama.mwb com o diagrama de entidades e relações (talvez o arquivo diagrama.mwb só abra no MySQL Workbench).
+> Algumas imagens podem ter pequenas diferenças quando comparadas ao estado atual do banco de dados, mas sem que isso interfira no que se está querendo ilustrar com as imagens. Isso acontece porque o projeto está em processo de melhoria contínua. O estado atual do banco de dados é o que pode ser visto no arquivo CARLOCA.sql com o script de criação, no arquivo diagrama.mwb com o diagrama de entidades e relações (talvez o arquivo diagrama.mwb só abra no MySQL Workbench), e no arquivo diagrama_como_imagem.png.
 
 ## Modelagem e explicação
 A estrutura do banco de dados está feita em inglês (para uma possível manutenção por um time internacional), porém os dados em si estão em português (pois a utilização seria feita por brasileiros).
